@@ -21,10 +21,9 @@
             "Nicotec\\Bundle\\GeneBundle\\": ""
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/nicotec/GeneratorDoctrineMysql.git"
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.2.x-dev"
         }
-    ]
+    }
 }
