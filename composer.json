@@ -1,5 +1,5 @@
 {
-    "name": "nicotec/generator-doctrine-mysql",
+    "name": "nicotec/generator-doctrine-mysql-bundle",
     "type": "symfony-bundle",
     "description": "Generator Entity Doctrine for Mysql - doctrine reverse engineer auto",
     "keywords": ["generator", "doctrine2", "mysql"],
@@ -26,6 +26,5 @@
             "type": "vcs",
             "url": "https://github.com/nicotec/GeneratorDoctrineMysql.git"
         }
-    ],
-    "target-dir": "Nicotec/Bundle/GeneBundle"
+    ]
 }
