@@ -1,0 +1,15 @@
+{% extends "WsGeneEditBundle::layout.html.twig" %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-3">
+        {% block body_column %}
+        {% endblock %}
+    </div>
+    <div class="col-md-12">
+        {% block body_content %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
+

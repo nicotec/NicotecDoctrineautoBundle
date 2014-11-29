@@ -1,0 +1,73 @@
+{% extends "WsGeneEditBundle::layout_generator.html.twig" %}
+
+{% block title %}Doctrine Generator!{% endblock %}
+
+{% block body %}
+<script type="text/javascript">
+    $(function() {
+
+        $('.ws_entity').click(function() {
+            var t = $(this);
+            $('.ws_entity_vu,.ws_repository_vu').hide();
+            $('#' + t.attr('id') + '_vu').show();
+            $('#' + t.attr('id') + '_r_vu').show();
+        });
+
+    });
+</script>
+
+
+<style type="text/css">
+    .ws_entity{
+        background: #f1f1f1;
+        color: #444444;
+        padding: 7px;
+        margin: 4px;
+        cursor: pointer;
+        border-radius: 2px;
+        font-size: 14px;
+    }
+    .ws_entity:hover{
+        background: #cccccc;
+        color: #000000;
+    }
+    .ws_entity_vu,.ws_repository_vu{
+        display: none;
+    }
+</style>
+
+
+<h3>Génération automatique de doctrine2 sur la base {{ app.session.get('bdd_name') }}</h3>
+
+<div class="row">
+    <div class="col-md-12">Ecrire les entités avec la connection <code>{{ app.session.get('connexion_name') }}</code> dans <code>{{ eq.geneConfig.getSrcDirEntity() }}</code>
+        <br><a href="{{ path('gene.doctrine2', { 'put' : 1 } ) }}" class="btn btn-warning">Ecrire les entités</a>
+    </div>
+    <hr>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        {% for table,code in eq.codeEntity %}
+        {% if table %}
+        <div class="ws_entity" id="{{ eq.base }}_{{ table }}">
+            {{ table }}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="col-md-9">
+        {% for table,code in eq.codeRepository %}
+        <div class="ws_repository_vu" id="{{ eq.base }}_{{ table }}_r_vu"><pre>{{ code }}</pre></div>
+        {% endfor %}
+        {% for table,code in eq.codeEntity %}
+        <div class="ws_entity_vu" id="{{ eq.base }}_{{ table }}_vu"><pre>{{ code }}</pre></div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+{% endblock %}
+

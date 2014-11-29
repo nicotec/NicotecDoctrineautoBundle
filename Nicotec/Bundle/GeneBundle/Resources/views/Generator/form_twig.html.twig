@@ -1,0 +1,46 @@
+{% extends "WsGeneEditBundle:Include:column_left.html.twig" %}
+
+{% set title = 'Twig formulaire' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+    $(function() {
+
+
+    })
+</script>
+{% endblock %}
+
+{% block body_column %}
+{% include 'WsGeneEditBundle:Include:menu_code.html.twig' %}
+{% endblock %}
+
+
+{% block body_content %}
+<h3>{{ title }}</h3>
+
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="#tab1" data-toggle="tab">Développer</a></li>
+    <li><a href="#tab2" data-toggle="tab">Simple</a></li>
+    <li><a href="#tab3" data-toggle="tab">Form theme</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+        <div class="alert alert-info">{{ codes['twig_form_developpe']['fichier']|raw }}</div>
+        {{ cc.config(codes['twig_form_developpe']['code'],'php').result() }}
+    </div>
+    <div class="tab-pane" id="tab2">
+        <div class="alert alert-info">{{ codes['twig_form']['fichier']|raw }}</div>
+        {{ cc.config(codes['twig_form']['code'],'php').result() }}
+    </div>
+    <div class="tab-pane" id="tab3">
+        <div class="alert alert-info">{{ codes['twig_form_theme']['fichier']|raw }}</div>
+        {{ cc.config(codes['twig_form_theme']['code'],'php').result() }}
+    </div>
+</div>
+
+{% endblock %}
+

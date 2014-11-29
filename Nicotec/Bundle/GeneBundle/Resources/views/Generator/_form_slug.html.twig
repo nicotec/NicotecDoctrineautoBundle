@@ -1,0 +1,4 @@
+<h5>{{ codes[slug]['help'] }} :</h5>
+<div><a href="#" url="{{ path('gene.copie', codes[slug]  ) }}" class="btn btn-primary href_url_auto">Créer le fichier</a> {{ codes[slug]['file'] }}</div>
+<br>
+{{ cc.config(codes[slug]['code'],'php').result() }}

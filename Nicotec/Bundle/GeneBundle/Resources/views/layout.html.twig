@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block title %}Generator!{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="shortcut icon" href="{{ asset('bundles/ws-generator/bootstrap/img/refresh-icone-6554-16.png') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/ws-generator/bootstrap/css/bootstrap.min.css') }}">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="{{ asset('bundles/ws-generator/bootstrap/css/bootstrap-responsive.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+
+        <script src="{{ asset('js/vendor/modernizr-2.6.1-respond-1.1.0.min.js') }}"></script>
+
+        {% block css %}
+        {% endblock %}
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        {#<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Générator</a>
+
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li><a href="{{ path('gene.setup') }}"><i class="icon-cog icon-white"></i> Setup</a></li>
+                            <li class="active"><a href="{{ path('gene.index') }}">Accueil</a></li>
+                            <li><a href="{{ path('gene.form_controller') }}"><i class="icon-barcode icon-repeat icon-white"> </i> Auto code</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Générator<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Formulaire</li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ path('gene.doctrine2') }}"><i class="icon-repeat icon-white"> </i> Auto Doctrine2</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+
+                </div>
+            </div>
+        </div>#}
+
+        <div class="container">
+
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+
+
+    <hr>
+
+    <footer>
+        <p>&copy; Pingolitipus2 {{ 'now'|date('Y') }}</p>
+    </footer>
+
+</div> <!-- /container -->
+
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+<script src="{{ asset('js/plugins.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+
+<script type="text/javascript">
+var request_ajax = '';
+var debug_var = '';
+var start_sortable_e = '';
+var start_sortable_w = '';
+var update_sortable_e = '';
+var update_sortable_p = '';
+var verif = 'false';
+
+
+//Ajax///////////////////////////////////////////////////////////////////////////////////////////////
+//ajax mode AUTHENTIFIER
+function action_json(url,parameters,callback_success,callback_error) {
+    request_ajax = null;
+    submit_json(url,parameters,true,callback_success,callback_error);
+}
+
+function action_json_sync(url,parameters,callback_success,callback_error) {
+    request_ajax = null;
+    submit_json(url,parameters,false,callback_success,callback_error);
+}
+
+function submit_json(url,parameters,async,callback_success,callback_error) {
+    $('#ws_set').fadeIn();
+
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data: parameters,
+        dataType: 'json',
+        async: async,
+        cache: false,
+        success: function(request) {
+            $('#ws_set').fadeOut();
+            request_ajax = debug_var = request;
+            if (typeof callback_success !== 'undefined')
+                callback_success();
+        },
+        error: function() {
+            if (typeof callback_error !== 'undefined')
+                callback_error();
+        }
+    });
+
+    return false;
+}
+
+$(function() {
+
+    $('.href_url_auto').click(function() {
+        action_json($(this).attr('url'),false,function() {
+            alert('Fichier: ' + request_ajax.file);
+        });
+
+        return false;
+    });
+
+});
+</script>
+
+{% block js %}{% endblock %}
+
+</body>
+</html>

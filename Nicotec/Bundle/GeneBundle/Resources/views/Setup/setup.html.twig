@@ -1,0 +1,59 @@
+{% extends "WsGeneEditBundle::layout_generator.html.twig" %}
+
+{% form_theme form _self %}
+
+{% block form_row %}
+{% set help = attr['help']|default(null) %}
+<div class="form-group">
+    <label class="col-xs-4 control-label">{{ form_label(form) }}</label>
+    <div class="col-xs-4">
+        {{ form_widget(form, { 'attr' : { 'class' : 'form-control' } }) }}
+    </div>
+    <div class="col-xs-4">
+        {{ help }}
+    </div>
+</div>
+{% endblock %}
+
+
+{% block title %}Setup{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-12">
+
+        <h4>Configurer l'export doctrine</h4>
+
+        <div class="alert alert-info alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Renseigné les informations pour le générateur.
+        </div>
+
+        {% if app.session.flashBag.has('success') %}
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {% for success in app.session.flashBag.get('success') %}
+            <div>{{ success }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if app.session.flashBag.has('error') %}
+        <div class="alert alert-error alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {% for error in app.session.flashBag.get('error') %}
+            <div>{{ error }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+
+        {{ form_start(form, { 'attr' : { 'class' : 'form-horizontal' } } ) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,4 @@
+http://www.doctrine-project.org/docs/orm/2.0/en/reference/working-with-objects.html#entity-object-graph-traversal
+
+
+pour installer les proxy

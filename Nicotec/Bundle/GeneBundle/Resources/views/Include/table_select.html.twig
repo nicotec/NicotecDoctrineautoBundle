@@ -1,0 +1,20 @@
+{% set bilan = app.request.get('bilan') %}
+<select id="table_select">
+    {% if bilan %}
+    {% for table,key in bilan %}
+    <option value="{{ table }}"  {% if table == app.session.get('table') %}selected{% endif %}><i class="icon-book"></i> {{ app.session.get('database') }}{{ table }}</option>
+{% endfor %}
+{% endif %}
+</select>
+
+<script type="text/javascript">
+    $(function() {
+
+        $('#table_select').change(function() {
+            action_json("{{ path('gene.table_change') }}","table=" + $(this).val(),function() {
+                document.location.reload;
+            });
+        });
+
+    });
+</script>

@@ -1,0 +1,15 @@
+{% include 'WsGeneEditBundle:Include:table_select.html.twig' %}
+{% set page = app.request.get('page')|default('form_controller') %}
+
+<ul class="nav nav-pills nav-stacked">
+    <li class="nav-header">Formulaire</li>
+    <li {% if page == 'form_controller' %}class="active"{% endif %}><a href="{{ path('gene.form_controller', { 'page' : 'form_controller' } ) }}">Le contrôleur</a></li>
+    <li {% if page == 'form_th' %}class="active"{% endif %}><a href="{{ path('gene.form_th', { 'page' : 'form_th' } ) }}">Type et Handler</a></li>
+    <li {% if page == 'form_twig_crud' %}class="active"{% endif %}><a href="{{ path('gene.form_twig_crud', { 'page' : 'form_twig_crud' } ) }}">Twig Crud</a></li>
+    <li {% if page == 'form_autre' %}class="active"{% endif %}><a href="{{ path('gene.form_autre', { 'page' : 'form_autre' } ) }}">Form autre</a></li>
+    <li class="nav-header">Query</li>
+    <li {% if page == 'query' %}class="active"{% endif %}><a href="{{ path('gene.query', { 'page' : 'query' } ) }}">Query</a></li>
+    <li {% if page == 'pager' %}class="active"{% endif %}><a href="{{ path('gene.pager', { 'page' : 'pager' } ) }}">Pager</a></li>
+    <li class="nav-header">Doctrine extensions</li>
+    <li {% if page == 'sortable' %}class="active"{% endif %}><a href="{{ path('gene.sortable', { 'page' : 'sortable' } ) }}">Sortable</a></li>
+</ul>

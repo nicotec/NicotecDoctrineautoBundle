@@ -1,0 +1,35 @@
+{% extends "WsGeneEditBundle::layout.html.twig" %}
+
+{% block title %}Doctrine Generator!{% endblock %}
+
+{% block body %}
+<script type="text/javascript">
+    $(function(){
+
+        $('.ws_entity').click(function(){
+            var t = $(this);
+            $('.ws_entity_vu').slideUp(800, function(){
+                $('#'+t.attr('id')+'_vu').slideDown()
+            })
+        })
+
+    })
+    </script>
+
+    <div>Génération automatique</div>
+    <br>
+<pre>
+</pre>
+{% for basename,base in bases %}
+
+    {% for table,code in base.codeEntity %}
+    <div class="ws_entity" id="{{ base.name }}_{{ table }}" style="background: #f1f1f1;padding: 5px;cursor: pointer">{{ basename }} : <b>{{ table }}</b> </div>
+    <div class="ws_entity_vu" id="{{ base.name }}_{{ table }}_vu" style="display: none"><textarea style="width: 800px;height: 800px;">{{ code }}</textarea></div>
+    <br>
+    {% endfor %}
+    <br>
+    <br>
+{% endfor %}
+
+{% endblock %}
+

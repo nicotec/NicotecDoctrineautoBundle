@@ -1,0 +1,61 @@
+{% extends "WsGeneEditBundle:Include:column_left.html.twig" %}
+
+{% set title = 'Query select/update/delete/...' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+    $(function() {
+
+
+    })
+</script>
+{% endblock %}
+
+{% block body_column %}
+{% include 'WsGeneEditBundle:Include:menu_code.html.twig' %}
+{% endblock %}
+
+
+{% block body_content %}
+<h3>{{ title }}</h3>
+
+<ul class="nav nav-tabs" id="myTab">
+    <li><a href="#tab1" data-toggle="tab">Infos</a></li>
+    <li class="active"><a href="#tab2" data-toggle="tab">Select</a></li>
+    <li><a href="#tab3" data-toggle="tab">IsNull</a></li>
+    <li><a href="#tab4" data-toggle="tab">Update</a></li>
+    <li><a href="#tab5" data-toggle="tab">Delete</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane" id="tab1">
+        <div class="alert alert-info">
+            Générateur pour la table: <b>{{ app.request.get('table') }}</b>
+        </div>
+    </div>
+    <div class="tab-pane active" id="tab2">
+        <div class="alert alert-info">Select :</div>
+        {{ cc.config(codes['select']['code'],'php').result() }}
+    </div>
+    <div class="tab-pane active" id="tab3">
+        <div class="alert alert-info">Is null :</div>
+        {{ cc.config(codes['is_null']['code'],'php').result() }}
+    </div>
+    <div class="tab-pane" id="tab4">
+        <div class="alert alert-info">Update :</div>
+        {{ cc.config(codes['update']['code'],'php').result() }}
+    </div>
+    <div class="tab-pane" id="tab5">
+        <div class="alert alert-info"><b>Delete</b> action</div>
+        {{ cc.config(codes['delete']['code'],'php').result() }}
+        <br>
+        <br>
+        <div class="alert alert-info"><b>Delete all</b> action</div>
+        {{ cc.config(codes['delete_all']['code'],'php').result() }}
+    </div>
+</div>
+
+{% endblock %}
+

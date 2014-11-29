@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>{% block title %}Doctrine Generator{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="{{ asset('bundles/ws-generator/img/refresh-icone-6554-16.png') }}">
+
+        <link href="{{ asset('bundles/ws-generator/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+        {% block css %}{% endblock %}
+
+        <script src="{{ asset('bundles/ws-generator/bootstrap/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('bundles/ws-generator/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/ws-generator/js/ajax.js') }}"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ path('gene.index') }}">Generator DX</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ path('gene.setup') }}"><i class="icon-cog icon-white"></i> Setup</a></li>
+                    <li><a href="{{ path('gene.form_controller') }}"><i class="icon-barcode icon-repeat icon-white"> </i> Auto code</a></li>
+                    <li><a href="{{ path('gene.doctrine2') }}"><i class="icon-repeat icon-white"> </i> Auto Doctrine2</a></li>
+
+                    {#<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Historique <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('form.historique_contact.index') }}">Historique</a></li>
+                            <li><a href="{{ path('form.historique_contact_anonyme.index') }}">Historique anonymes</a></li>
+                            <li><a href="#">Rendez-vous</a></li>
+                        </ul>
+                    </li>#}
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            {% block body %}{% endblock %}
+            <hr>
+
+            <footer>
+                <p>&copy; Nicolas Longuet {{ 'now'|date('Y') }}</p>
+            </footer>
+        </div>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

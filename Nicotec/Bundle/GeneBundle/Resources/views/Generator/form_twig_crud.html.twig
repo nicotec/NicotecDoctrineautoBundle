@@ -1,0 +1,56 @@
+{% extends "WsGeneEditBundle:Include:column_left.html.twig" %}
+
+{% set title = 'Formulaire twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+    $(function() {
+
+
+    })
+</script>
+{% endblock %}
+
+{% block body_column %}
+{% include 'WsGeneEditBundle:Include:menu_code.html.twig' %}
+{% endblock %}
+
+
+{% block body_content %}
+<h3>{{ title }}</h3>
+
+<ul class="nav nav-tabs" id="myTab">
+    <!--<li><a href="#tab1" data-toggle="tab">Configurer</a></li>-->
+    <li class="active"><a href="#tab2" data-toggle="tab">Form simple</a></li>
+    <li><a href="#tab3" data-toggle="tab">Form développer</a></li>
+    <li><a href="#tab4" data-toggle="tab">Form Show</a></li>
+</ul>
+
+<div class="tab-content">
+    <!--    <div class="tab-pane" id="tab1">
+            coming soon
+        </div>-->
+    <div class="tab-pane active" id="tab2">
+        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new_edit' } %}
+        <br>
+        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new' } %}
+        <br>
+        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_edit' } %}
+    </div>
+    <div class="tab-pane" id="tab3">
+        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new_edit_dev' } %}
+        <br>
+        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new_dev' } %}
+        <br>
+        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_edit_dev' } %}
+    </div>
+    <div class="tab-pane" id="tab4">
+        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_show_all' } %}
+    </div>
+
+</div>
+
+{% endblock %}
+

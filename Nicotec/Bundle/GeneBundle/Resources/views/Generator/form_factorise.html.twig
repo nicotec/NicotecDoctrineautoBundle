@@ -1,0 +1,58 @@
+{% extends "WsGeneEditBundle:Include:column_left.html.twig" %}
+
+{% set title = 'Formulaire factorisé' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+    $(function() {
+
+
+    });
+</script>
+{% endblock %}
+
+{% block body_column %}
+{% include 'WsGeneEditBundle:Include:menu_code.html.twig' %}
+{% endblock %}
+
+{% block body_content %}
+<h3>{{ title }}</h3>
+
+<ul class="nav nav-tabs" id="myTab">
+    <!--<li><a href="#tab1" data-toggle="tab">Configurer</a></li>-->
+    <li class="active"><a href="#tab2" data-toggle="tab">Action</a></li>
+    <li><a href="#tab3" data-toggle="tab">Form</a></li>
+    <li><a href="#tab4" data-toggle="tab">Fichier</a></li>
+</ul>
+
+<div class="tab-content">
+<!--    <div class="tab-pane" id="tab1">
+        coming soon
+    </div>-->
+    <div class="tab-pane active" id="tab2">
+        <div class="alert alert-info">Formulaire factorisé dans le contrôleur :</div>
+        {{ cc.config(codes['form_action_factorise']['code'],'php').result() }}
+        <br>
+        <br>
+        <div class="alert alert-info"><b>Formulaire factorisé</b> avec action <b>Insert</b> et <b>Update</b> séparées dans le contrôleur :</div>
+        {{ cc.config(codes['form_action_factorise_ui']['code'],'php').result() }}
+    </div>
+    <div class="tab-pane" id="tab3">
+        <div class="alert alert-info">{{ codes['form_type']['file']|raw }}</div>
+        <div><a href="#" url="{{ path('gene.copie', codes['form_type']  ) }}" class="href_url_auto">Créer le fichier</a></div>
+        {{ cc.config(codes['form_type']['code'],'php').result() }}
+        <br>
+        <br>
+        <div class="alert alert-info">{{ codes['form_handler']['fichier']|raw }}</div>
+        {{ cc.config(codes['form_handler']['code'],'php').result() }}
+    </div>
+    <div class="tab-pane" id="tab4">
+        <div class="alert alert-info">{{ codes['form_file']['fichier']|raw }}</div>
+        {{ cc.config(codes['form_file']['code'],'php').result() }}
+    </div>
+</div>
+
+{% endblock %}
+

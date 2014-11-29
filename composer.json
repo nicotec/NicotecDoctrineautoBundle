@@ -1,0 +1,31 @@
+{
+    "name": "nicotec/wsgenerator",
+    "type": "symfony-bundle",
+    "description": "Generateur doctrine2",
+    "keywords": ["generator", "doctrine2"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Longuet",
+            "email": "nicolas.longuet@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": ">=2.3",
+        "twig/twig": "*",
+        "doctrine/doctrine-bundle": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Nicotec\\Bundle\\GeneBundle\\": ""
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:nicolas_longuet/wsgenerator.git"
+        }
+    ],
+    "target-dir": "Nicotec/Bundle/GeneBundle"
+}
