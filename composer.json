@@ -1,5 +1,5 @@
 {
-    "name": "nicotec/generator-doctrine-mysql",
+    "name": "nicotec/doctrineauto-bundle",
     "type": "symfony-bundle",
     "description": "Generator Entity Doctrine for Mysql - doctrine reverse engineer auto",
     "keywords": ["generator", "doctrine2", "mysql"],
@@ -12,14 +12,14 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "symfony/symfony": ">=2.5.*",
-        "nicotec/generator-doctrine-mysql": ">1"
+        "symfony/symfony": ">=2.5.*"
     },
     "autoload": {
-        "psr-4": {
-            "Nicotec\\Bundle\\GeneBundle\\": ""
+        "psr-0": {
+            "Nicotec\\DoctrineautoBundle\\": ""
         }
     },
+    "target-dir": "Nicotec/DoctrineautoBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "1.2-dev"
