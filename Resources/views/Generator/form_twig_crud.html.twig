@@ -1,4 +1,4 @@
-{% extends "WsGeneEditBundle:Include:column_left.html.twig" %}
+{% extends "NicotecDoctrineautoBundle:Include:column_left.html.twig" %}
 
 {% set title = 'Formulaire twig' %}
 
@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block body_column %}
-{% include 'WsGeneEditBundle:Include:menu_code.html.twig' %}
+{% include 'NicotecDoctrineautoBundle:Include:menu_code.html.twig' %}
 {% endblock %}
 
 
@@ -33,21 +33,21 @@
             coming soon
         </div>-->
     <div class="tab-pane active" id="tab2">
-        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new_edit' } %}
+        {% include 'NicotecDoctrineautoBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new_edit' } %}
         <br>
-        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new' } %}
+        {% include 'NicotecDoctrineautoBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new' } %}
         <br>
-        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_edit' } %}
+        {% include 'NicotecDoctrineautoBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_edit' } %}
     </div>
     <div class="tab-pane" id="tab3">
-        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new_edit_dev' } %}
+        {% include 'NicotecDoctrineautoBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new_edit_dev' } %}
         <br>
-        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new_dev' } %}
+        {% include 'NicotecDoctrineautoBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_new_dev' } %}
         <br>
-        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_edit_dev' } %}
+        {% include 'NicotecDoctrineautoBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_edit_dev' } %}
     </div>
     <div class="tab-pane" id="tab4">
-        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_show_all' } %}
+        {% include 'NicotecDoctrineautoBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_twig_show_all' } %}
     </div>
 
 </div>

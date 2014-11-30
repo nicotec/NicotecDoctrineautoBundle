@@ -1,4 +1,4 @@
-{% extends "WsGeneEditBundle:Include:column_left.html.twig" %}
+{% extends "NicotecDoctrineautoBundle:Include:column_left.html.twig" %}
 
 {% set title = 'Formulaire type et handler' %}
 
@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block body_column %}
-{% include 'WsGeneEditBundle:Include:menu_code.html.twig' %}
+{% include 'NicotecDoctrineautoBundle:Include:menu_code.html.twig' %}
 {% endblock %}
 
 
@@ -32,10 +32,10 @@
         coming soon
     </div>-->
     <div class="tab-pane active" id="tab2">
-        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_type' } %}
+        {% include 'NicotecDoctrineautoBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_type' } %}
     </div>
     <div class="tab-pane" id="tab3">
-        {% include 'WsGeneEditBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_handler' } %}
+        {% include 'NicotecDoctrineautoBundle:Generator:_form_slug.html.twig' with { 'slug' : 'form_handler' } %}
     </div>
 </div>
 

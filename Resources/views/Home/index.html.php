@@ -1,4 +1,4 @@
-<?php $view->extend('WsGeneEditBundle::layout_home.html.php') ?>
+<?php $view->extend('NicotecDoctrineautoBundle::layout_home.html.php') ?>
 
 
 <?php $view['slots']->start('body') ?>
