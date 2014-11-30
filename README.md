@@ -1,7 +1,6 @@
 # NicotecDoctrineautoBundle
 
-Generateur entities pour doctrine2
-========================
+Generateur des entités pour doctrine2
 Génère les entités des bases de données de doctrine2
 
 Installation
