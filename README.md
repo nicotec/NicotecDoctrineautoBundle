@@ -8,7 +8,7 @@ Génère les entité des bases de données de doctrine2
 A) Ajouter à app/AppKernel.php (en dev uniquement):
 
 if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-    $bundles[] = new WsGene\EditBundle\WsGeneEditBundle();
+    $bundles[] = new Nicotec\DoctrineautoBundle\WsGeneEditBundle();
 }
 
 

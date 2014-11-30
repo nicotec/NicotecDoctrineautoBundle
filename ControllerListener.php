@@ -1,11 +1,11 @@
 <?php
 
-namespace WsGene\EditBundle;
+namespace Nicotec\DoctrineautoBundle;
 
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
-use WsGene\EditBundle\Twig\Extension\DemoExtension;
+use Nicotec\DoctrineautoBundle\Twig\Extension\DemoExtension;
 
 class ControllerListener
 {

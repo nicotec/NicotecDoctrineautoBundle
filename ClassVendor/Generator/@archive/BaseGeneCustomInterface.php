@@ -1,6 +1,6 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator;
 
 interface BaseGeneCustomInterface {
 

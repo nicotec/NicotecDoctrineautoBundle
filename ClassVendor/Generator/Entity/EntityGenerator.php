@@ -1,11 +1,11 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Entity;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity;
 
 use Monolog\Logger;
 use Symfony\Component\Config\Definition\Exception\Exception;
-use WsGene\EditBundle\ClassVendor\Generator\GeneFiltre;
-use WsGene\EditBundle\ClassVendor\Generator\Register;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\GeneFiltre;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Register;
 
 class EntityGenerator extends SetterGenerator
 {

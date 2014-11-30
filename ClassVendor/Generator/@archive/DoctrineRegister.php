@@ -1,13 +1,13 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Doctrine;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Doctrine;
 
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\Router;
-use WsGene\EditBundle\ClassVendor\Generator\Entity\EntityGenerator;
-use WsGene\EditBundle\ClassVendor\Generator\Register;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity\EntityGenerator;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Register;
 
 class DoctrineRegister {
 

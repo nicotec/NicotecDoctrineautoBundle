@@ -1,6 +1,6 @@
 <?php
 
-namespace WsGene\EditBundle\Controller;
+namespace Nicotec\DoctrineautoBundle\Controller;
 
 use Doctrine\Common\Cache\ApcCache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -9,8 +9,8 @@ use SplFileObject;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use WsGene\EditBundle\ClassVendor\GeshiColor;
-use WsGene\EditBundle\Controller\ReController as Controller;
+use Nicotec\DoctrineautoBundle\ClassVendor\GeshiColor;
+use Nicotec\DoctrineautoBundle\Controller\ReController as Controller;
 
 class GeneratorController extends Controller {
 

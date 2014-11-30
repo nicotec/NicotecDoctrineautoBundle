@@ -1,12 +1,12 @@
 <?php
 
-namespace WsGene\EditBundle\Controller;
+namespace Nicotec\DoctrineautoBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
-use WsGene\EditBundle\ClassVendor\Generator\GeneConfig;
-use WsGene\EditBundle\Controller\ReController as Controller;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\GeneConfig;
+use Nicotec\DoctrineautoBundle\Controller\ReController as Controller;
 
 class SetupController extends Controller {
 

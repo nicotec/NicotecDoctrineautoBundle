@@ -1,14 +1,14 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Entity;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity;
 
 use Exception;
 use Monolog\Handler\StreamHandler;
 use Symfony\Bridge\Monolog\Logger;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use WsGene\EditBundle\ClassVendor\Generator\GeneConfig;
-use WsGene\EditBundle\ClassVendor\Generator\Register;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\GeneConfig;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Register;
 
 abstract class GetterGenerator extends FormatGenerator
 {

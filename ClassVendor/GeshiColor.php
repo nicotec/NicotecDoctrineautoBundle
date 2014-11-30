@@ -1,6 +1,6 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor;
+namespace Nicotec\DoctrineautoBundle\ClassVendor;
 
 use GeSHi;
 use Symfony\Component\HttpKernel\Kernel;

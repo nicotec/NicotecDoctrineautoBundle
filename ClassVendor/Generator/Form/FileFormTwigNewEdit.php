@@ -1,8 +1,8 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Form;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Form;
 
-use WsGene\EditBundle\ClassVendor\Generator\Form\FormGeneratorExtends;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Form\FormGeneratorExtends;
 
 class FileFormTwigNewEdit extends FormGeneratorExtends {
 

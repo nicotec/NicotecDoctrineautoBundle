@@ -1,11 +1,11 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Form;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Form;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Kernel;
-use WsGene\EditBundle\ClassVendor\Generator\Entity\FormatGenerator;
-use WsGene\EditBundle\ClassVendor\Generator\GeneFiltre;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity\FormatGenerator;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\GeneFiltre;
 
 class FormGeneratorExtends Extends FormatGenerator {
 

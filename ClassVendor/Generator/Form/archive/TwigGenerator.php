@@ -1,10 +1,10 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Form;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Form;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Kernel;
-use WsGene\EditBundle\ClassVendor\Generator\Form\FormGeneratorExtends;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Form\FormGeneratorExtends;
 
 class TwigGenerator extends FormGeneratorExtends {
 

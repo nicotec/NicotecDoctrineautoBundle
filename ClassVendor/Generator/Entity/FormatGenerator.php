@@ -1,9 +1,9 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Entity;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity;
 
 use Symfony\Component\DependencyInjection\Container;
-use WsGene\EditBundle\ClassVendor\Generator\GeneFiltre;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\GeneFiltre;
 
 class FormatGenerator {
 

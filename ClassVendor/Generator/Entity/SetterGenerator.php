@@ -1,6 +1,6 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Entity;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity;
 
 abstract class SetterGenerator extends GetterGenerator
 {

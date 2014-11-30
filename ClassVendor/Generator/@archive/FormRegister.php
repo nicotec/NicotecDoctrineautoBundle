@@ -1,14 +1,14 @@
 <?php
 //
-//namespace WsGene\EditBundle\ClassVendor\Generator\Form;
+//namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Form;
 //
 //use Symfony\Bundle\FrameworkBundle\Routing\Router;
 //use Symfony\Component\DependencyInjection\Container;
 //use Symfony\Component\HttpFoundation\Request;
 //use Symfony\Component\HttpKernel\Kernel;
-//use WsGene\EditBundle\ClassVendor\Generator\Entity\EntityGenerator;
-//use WsGene\EditBundle\ClassVendor\Generator\Form\FormGenerator;
-//use WsGene\EditBundle\ClassVendor\Generator\Register;
+//use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity\EntityGenerator;
+//use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Form\FormGenerator;
+//use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Register;
 //use apc_exists;
 //use apc_store;
 //use apc_fetch;

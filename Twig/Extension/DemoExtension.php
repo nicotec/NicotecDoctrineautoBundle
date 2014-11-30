@@ -1,6 +1,6 @@
 <?php
 
-namespace WsGene\EditBundle\Twig\Extension;
+namespace Nicotec\DoctrineautoBundle\Twig\Extension;
 
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Bundle\TwigBundle\Loader\FilesystemLoader;

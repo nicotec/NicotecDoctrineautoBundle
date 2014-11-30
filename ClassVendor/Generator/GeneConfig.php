@@ -1,6 +1,6 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator;
 
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;

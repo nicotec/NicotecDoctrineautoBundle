@@ -1,14 +1,14 @@
 <?php
 
-namespace WsGene\EditBundle\Controller;
+namespace Nicotec\DoctrineautoBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use SplFileObject;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use WsGene\EditBundle\ClassVendor\Generator\Entity\EntityGenerator;
-use WsGene\EditBundle\ClassVendor\Generator\Register;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity\EntityGenerator;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Register;
 
 class ReController extends Controller {
 
@@ -36,7 +36,7 @@ class ReController extends Controller {
 //        $request->request->add(array('gene' => $eg->getGene(), 'bilan' => $register->getBilan()));
         $eg->dispatch(true);
 
-        $classGenerator = 'WsGene\EditBundle\ClassVendor\Generator\\' . $class;
+        $classGenerator = 'Nicotec\DoctrineautoBundle\ClassVendor\Generator\\' . $class;
 
 //        $root_dir = $this->get('kernel')->getRootDir();
 //        echo $root_dir;

@@ -1,10 +1,10 @@
 <?php
 
-namespace WsGene\EditBundle\Controller;
+namespace Nicotec\DoctrineautoBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use WsGene\EditBundle\Controller\ReController as Controller;
+use Nicotec\DoctrineautoBundle\Controller\ReController as Controller;
 
 class AccueilController extends Controller {
 

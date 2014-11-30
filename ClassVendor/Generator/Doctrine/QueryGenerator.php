@@ -1,10 +1,10 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Doctrine;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Doctrine;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Kernel;
-use WsGene\EditBundle\ClassVendor\Generator\Form\FormGeneratorExtends;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Form\FormGeneratorExtends;
 
 class QueryGenerator extends FormGeneratorExtends {
 

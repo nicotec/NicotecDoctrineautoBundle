@@ -1,6 +1,6 @@
 <?php
 
-namespace WsGene\EditBundle\DependencyInjection;
+namespace Nicotec\DoctrineautoBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;

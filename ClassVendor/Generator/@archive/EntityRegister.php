@@ -1,12 +1,12 @@
 <?php
 
-namespace WsGene\EditBundle\ClassVendor\Generator\Entity;
+namespace Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity;
 
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\HttpKernel\Kernel;
-use WsGene\EditBundle\ClassVendor\Generator\Entity\EntityGenerator;
-use WsGene\EditBundle\ClassVendor\Generator\Register;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Entity\EntityGenerator;
+use Nicotec\DoctrineautoBundle\ClassVendor\Generator\Register;
 
 /**
  * Gestion de la création et de l'affichage du générateur de doctrine2
