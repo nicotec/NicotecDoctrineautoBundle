@@ -12,9 +12,8 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "symfony/framework-bundle": "*",
-        "twig/twig": "*",
-        "doctrine/doctrine-bundle": "*"
+        "symfony/symfony": ">=2.5.*",
+        "nicotec/generator-doctrine-mysql": ">1"
     },
     "autoload": {
         "psr-4": {
