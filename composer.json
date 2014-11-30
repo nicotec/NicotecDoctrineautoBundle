@@ -22,9 +22,5 @@
         }
     },
     "target-dir": "Nicotec/DoctrineautoBundle",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "master-dev"
-        }
-    }
+    "minimum-stability": "dev"
 }
