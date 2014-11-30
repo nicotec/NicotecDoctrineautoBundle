@@ -1,15 +1,39 @@
+# NicotecDoctrineautoBundle
+
 Generateur entities pour doctrine2
 ========================
-Génère les entité des bases de données de doctrine2
+Génère les entités des bases de données de doctrine2
 
-1) Installation
-----------------------------------
+Installation
+------------
 
-A) Ajouter à app/AppKernel.php (en dev uniquement):
+1) Use [Composer](https://getcomposer.org/) to download the library
 
-if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-    $bundles[] = new Nicotec\DoctrineautoBundle\WsGeneEditBundle();
+```
+php composer.phar require nicotec/doctrineauto-bundle
+```
+
+```php
+// app/AppKernel.php
+public function registerBundles()
+{
+    return array(
+        // ...
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            $bundles[] = new Nicotec\DoctrineautoBundle\NicotecDoctrineautoBundle();
+        }
+        // ...
+    );
 }
+```
+
+```php
+// app/config/routing_dev.yml
+nicotec_doctrineauto:
+    resource: "@NicotecDoctrineautoBundle/Controller/"
+    type:     annotation
+    prefix:   /doctrineauto
+```
 
 
 
