@@ -22,6 +22,9 @@
         }
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1"
+        },
         "symfony-assets-install": "relative"
     },
     "target-dir": "Nicotec/DoctrineautoBundle",
