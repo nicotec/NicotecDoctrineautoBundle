@@ -23,7 +23,7 @@
     },
     "target-dir": "Nicotec/DoctrineautoBundle",
     "extra": {
-        "symfony-assets-install": "relative"
+        "symfony-assets-install": "symlink"
     },
     "minimum-stability": "dev"
 }
