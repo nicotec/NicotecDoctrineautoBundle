@@ -1,12 +1,14 @@
 {% extends "NicotecDoctrineautoBundle::layout_generator.html.twig" %}
 
+
 {% block title %}Doctrine Generator!{% endblock %}
 
-{% block body %}
-<script type="text/javascript">
-    $(function() {
 
-        $('.ws_entity').click(function() {
+{% block javascripts %}
+<script type="text/javascript">
+    $(function () {
+
+        $('.ws_entity').click(function () {
             var t = $(this);
             $('.ws_entity_vu,.ws_repository_vu').hide();
             $('#' + t.attr('id') + '_vu').show();
@@ -17,6 +19,10 @@
 </script>
 
 
+{% endblock %}
+
+
+{% block body %}
 <style type="text/css">
     .ws_entity{
         background: #f1f1f1;
