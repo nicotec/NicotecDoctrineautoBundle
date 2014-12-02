@@ -25,5 +25,5 @@
     "extra": {
         "symfony-assets-install": "relative"
     },
-    "minimum-stability": "master"
+    "minimum-stability": "dev"
 }
