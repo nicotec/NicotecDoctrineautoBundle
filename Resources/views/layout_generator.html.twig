@@ -24,7 +24,6 @@
                 <script src="{{ asset('bundles/ws-generator/js/ajax.js') }}"></script>-->
     </head>
     <body>
-
         <nav class="navbar navbar-default" role="navigation">
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <div class="navbar-header">
@@ -56,11 +55,14 @@
             </footer>
         </div>
 
+        <script src="http://code.jquery.com/jquery.js"></script>
+
         {% javascripts
         '@NicotecDoctrineautoBundle/Resources/public/js/bootstrap.min.js'
         %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
+        
         {% block javascripts %}{% endblock %}
 
     </body>

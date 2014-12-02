@@ -11,7 +11,7 @@
     $(function() {
 
         $('#table_select').change(function() {
-            action_json("{{ path('gene.table_change') }}","table=" + $(this).val(),function() {
+            $.post("{{ path('gene.table_change') }}","table=" + $(this).val(),function() {
                 document.location.reload;
             });
         });
