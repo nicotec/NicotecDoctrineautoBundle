@@ -11,12 +11,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="{{ asset('bundles/ws-generator/img/refresh-icone-6554-16.png') }}">
 
-        <link href="{{ asset('bundles/ws-generator/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+        <!--<link href="{{ asset('bundles/ws-generator/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">-->
+        {% stylesheets
+        '@NicotecDoctrineautoBundle/Resources/public/css/bootstrap.min.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
         {% block css %}{% endblock %}
 
-        <script src="{{ asset('bundles/ws-generator/bootstrap/js/jquery.min.js') }}"></script>
-        <script src="{{ asset('bundles/ws-generator/bootstrap/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('bundles/ws-generator/js/ajax.js') }}"></script>
+        <!--        <script src="{{ asset('bundles/ws-generator/bootstrap/js/jquery.min.js') }}"></script>
+                <script src="{{ asset('bundles/ws-generator/bootstrap/js/bootstrap.min.js') }}"></script>
+                <script src="{{ asset('bundles/ws-generator/js/ajax.js') }}"></script>-->
     </head>
     <body>
 
@@ -51,6 +56,12 @@
             </footer>
         </div>
 
+        {% javascripts
+        '@NicotecDoctrineautoBundle/Resources/public/js/bootstrap.min.js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
         {% block javascripts %}{% endblock %}
+
     </body>
 </html>

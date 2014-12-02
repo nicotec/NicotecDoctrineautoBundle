@@ -11,21 +11,26 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="shortcut icon" href="{{ asset('bundles/ws-generator/bootstrap/img/refresh-icone-6554-16.png') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/ws-generator/bootstrap/css/bootstrap.min.css') }}">
+
+        {% stylesheets
+        '@NicotecDoctrineautoBundle/Resources/public/css/bootstrap.min.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+<!--        <link rel="stylesheet" href="{{ asset('bundles/ws-generator/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/ws-generator/bootstrap/css/bootstrap-responsive.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">-->
         <style>
             body {
                 padding-top: 60px;
                 padding-bottom: 40px;
             }
         </style>
-        <link rel="stylesheet" href="{{ asset('bundles/ws-generator/bootstrap/css/bootstrap-responsive.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
-        <script src="{{ asset('js/vendor/modernizr-2.6.1-respond-1.1.0.min.js') }}"></script>
+        <!--<script src="{{ asset('js/vendor/modernizr-2.6.1-respond-1.1.0.min.js') }}"></script>-->
 
         {% block css %}
         {% endblock %}
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -107,10 +112,16 @@
 
 <script src="http://code.jquery.com/jquery.js"></script>
 
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{% javascripts
+'@NicotecDoctrineautoBundle/Resources/public/js/bootstrap.min.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<!--<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
 <script src="{{ asset('js/plugins.js') }}"></script>
-<script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>-->
 
 <script type="text/javascript">
 var request_ajax = '';
@@ -144,13 +155,13 @@ function submit_json(url,parameters,async,callback_success,callback_error) {
         dataType: 'json',
         async: async,
         cache: false,
-        success: function(request) {
+        success: function (request) {
             $('#ws_set').fadeOut();
             request_ajax = debug_var = request;
             if (typeof callback_success !== 'undefined')
                 callback_success();
         },
-        error: function() {
+        error: function () {
             if (typeof callback_error !== 'undefined')
                 callback_error();
         }
@@ -159,10 +170,10 @@ function submit_json(url,parameters,async,callback_success,callback_error) {
     return false;
 }
 
-$(function() {
+$(function () {
 
-    $('.href_url_auto').click(function() {
-        action_json($(this).attr('url'),false,function() {
+    $('.href_url_auto').click(function () {
+        action_json($(this).attr('url'),false,function () {
             alert('Fichier: ' + request_ajax.file);
         });
 
