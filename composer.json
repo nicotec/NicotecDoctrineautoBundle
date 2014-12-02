@@ -14,8 +14,7 @@
         "php": ">=5.3.2",
         "symfony/framework-bundle": ">=2.3",
         "twig/twig": "*",
-        "doctrine/doctrine-bundle": "*",
-        "twbs/bootstrap": "dev-master"
+        "doctrine/doctrine-bundle": "*"
     },
     "autoload": {
         "psr-0": {
@@ -26,5 +25,5 @@
         "symfony-assets-install": "relative"
     },
     "target-dir": "Nicotec/DoctrineautoBundle",
-    "minimum-stability": "dev"
+    "minimum-stability": "dev-master"
 }
