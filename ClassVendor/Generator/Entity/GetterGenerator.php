@@ -329,7 +329,7 @@ eof
             foreach($this->getGene()->getJoinsReverses($table) as $champ => $configs) {
                 $code .= <<<eof
     /**
-     * @{$this->prefix}OneToMany(targetEntity="{$this->camelize($champ)}", mappedBy="{$this->champPearMin($table)}")
+     * @{$this->prefix}OneToMany(targetEntity="{$this->camelize($champ)}", mappedBy="{$this->champPearMin($table)}", cascade={"remove"})
      */
     protected \${$this->champPearMin($champ)}s;
 
@@ -379,7 +379,7 @@ eof
                 echo '<br>----' . __METHOD__ . '--' . $table;
                 $code .= <<<eof
     /**
-     * @{$this->prefix}OneToMany(targetEntity="{$this->camelize($configs['table'])}", mappedBy="{$this->champPearMin($configs['table_etrangere'])}")
+     * @{$this->prefix}OneToMany(targetEntity="{$this->camelize($configs['table'])}", mappedBy="{$this->champPearMin($configs['table_etrangere'])}", cascade={"remove"})
      */
     protected \${$this->champPearMin($configs['table_etrangere'] . '_' . $configs['table'])}s;
 
@@ -467,7 +467,7 @@ eof
             foreach($this->getGene()->getJoinSelfReferencingReverses($table) as $champ => $configs) {
                 $code .= <<<eof
     /**
-     * @{$this->prefix}OneToMany(targetEntity="{$this->camelize($table)}", mappedBy="{$this->champPearMin($champ)}")
+     * @{$this->prefix}OneToMany(targetEntity="{$this->camelize($table)}", mappedBy="{$this->champPearMin($champ)}", cascade={"remove"})
      */
     protected \${$this->champPearMin($champ)}s;
 
@@ -1126,7 +1126,7 @@ eof
     protected \$parent;
 
     /**
-     * @{$this->prefix}OneToMany(targetEntity="{$this->camelize($table)}", mappedBy="parent")
+     * @{$this->prefix}OneToMany(targetEntity="{$this->camelize($table)}", mappedBy="parent", cascade={"remove"})
      * @{$this->prefix}OrderBy({"{$trees['left']}" = "ASC"})
      */
     protected \$children;
